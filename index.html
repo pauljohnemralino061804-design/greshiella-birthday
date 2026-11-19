@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8e8e8">
+<title>For Greshiella — Happy Birthday</title>
+<style>
+:root{--rose:#b96f7d;--deep:#75434f;--cream:#fffaf6;--pink:#f7e4e5}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:#563d42;background:radial-gradient(circle at top,#fff8f5,#f5dfe2 65%,#ecd2d7);font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+main{width:min(92%,760px);margin:0 auto;padding:38px 0 60px}
+.hero{text-align:center;padding:24px 12px 30px}
+.eyebrow{letter-spacing:4px;text-transform:uppercase;font:11px Arial,sans-serif;color:var(--rose)}
+h1{font-size:clamp(34px,8vw,62px);font-weight:normal;color:var(--deep);margin:14px 0 8px}
+.subtitle{font-style:italic;color:#916b72;font-size:18px}
+.card{background:rgba(255,250,246,.91);border:1px solid #e9cbd0;border-radius:22px;padding:clamp(22px,5vw,46px);box-shadow:0 18px 55px #87545b1c;position:relative}
+.flower{font-size:28px;letter-spacing:8px;text-align:center;margin-bottom:18px}
+.salute{font-size:25px;color:var(--deep);margin:0 0 20px}
+.letter{font-size:17px;line-height:1.9;white-space:pre-line}
+.signature{margin-top:30px;font-size:20px;color:var(--deep);font-style:italic}
+.footer{text-align:center;margin-top:26px;color:#956d74;font:12px Arial,sans-serif;letter-spacing:1px}
+.opening{position:fixed;inset:0;background:linear-gradient(145deg,#f9e9e8,#eecfd5);display:grid;place-items:center;z-index:5;padding:24px;transition:opacity .7s,visibility .7s}
+.opening.hide{opacity:0;visibility:hidden}
+.envelope{text-align:center;max-width:440px}
+.envelope-icon{font-size:76px;filter:drop-shadow(0 8px 10px #9a5d6622)}
+.envelope h2{font-size:32px;font-weight:normal;color:var(--deep);margin:14px 0}
+.envelope p{font-style:italic;color:#916b72}
+button{border:0;border-radius:30px;background:var(--deep);color:white;padding:14px 25px;font-size:14px;letter-spacing:1px;cursor:pointer;margin-top:16px}
+button:hover{background:#925b68}
+.heart{position:fixed;pointer-events:none;animation:float 7s linear infinite;opacity:.5}
+@keyframes float{from{transform:translateY(105vh) rotate(0);opacity:0}15%{opacity:.5}to{transform:translateY(-10vh) rotate(35deg);opacity:0}}
+@media(max-width:520px){.letter{font-size:16px}.card{border-radius:16px}}
+</style>
+</head>
+<body>
+<div class="opening" id="opening">
+  <div class="envelope">
+    <div class="envelope-icon">💌</div>
+    <div class="eyebrow">A little something made with love</div>
+    <h2>For Greshiella</h2>
+    <p>There's a message waiting just for you.</p>
+    <button onclick="openLetter()">Open your birthday letter</button>
+  </div>
+</div>
+<main>
+  <header class="hero">
+    <div class="eyebrow">November 19 · A day to celebrate you</div>
+    <h1>Happy Birthday, Greshiella!</h1>
+    <div class="subtitle">Even miles apart, my heart is right there with you.</div>
+  </header>
+  <article class="card">
+    <div class="flower">🌷 ✿ 🌸 ✿ 🌷</div>
+    <p class="salute">My dearest Greshiella,</p>
+    <div class="letter">I know this bouquet may not be the biggest or most expensive one, pero sana maramdaman mo kung gaano karaming love ang kasama nito. Every flower represents a little piece of my love for you, something na minsan nahihirapan akong i-express through words.
+
+Alam naman natin na hindi madali ang LDR. There are times na sobrang nami-miss kita, especially during moments na gusto kitang yakapin, hawakan ang kamay mo, halikan sa noo, or simply be beside you kahit wala tayong ginagawa. Minsan, I wish I could just close my eyes and open them with you right next to me.
+
+Pero kahit malayo ako, I hope you never feel na nag-iisa ka or kulang ang pagmamahal ko sa'yo. Distance may keep us from being physically together, but it will never stop me from loving you, choosing you, and making an effort for us.
+
+Hindi man ako laging nandiyan para alagaan ka personally, I promise na gagawin ko ang best ko para maramdaman mong loved, appreciated, and valued ka kahit sa simpleng paraan lang.
+
+I may not be the perfect boyfriend, and I know I still have a lot to learn, but one thing is certain: <strong>I don't want to stop choosing you.</strong> I want to grow with you, make more memories with you, and build a future where distance is no longer part of our love story.
+
+On your birthday, I hope you remember how special you are—not just today, but every single day. I hope this new chapter brings you happiness, peace, beautiful opportunities, and all the love your heart deserves. Keep smiling, keep dreaming, and never forget that someone far away is cheering for you and loving you endlessly.
+
+Happy birthday, my love. Until the day I can give you this hug in person, please imagine the biggest, warmest hug from me wrapped around you.</div>
+    <div class="signature">With all my love,<br>Paul John Emralino ❤️</div>
+  </article>
+  <div class="footer">MADE WITH LOVE, JUST FOR YOU · ALWAYS YOURS</div>
+</main>
+<script>
+function openLetter(){document.getElementById('opening').classList.add('hide');}
+for(let i=0;i<12;i++){let h=document.createElement('div');h.className='heart';h.textContent=['♡','♥','✿'][i%3];h.style.left=(Math.random()*100)+'%';h.style.animationDelay=(Math.random()*7)+'s';h.style.fontSize=(14+Math.random()*18)+'px';document.body.appendChild(h);}
+</script>
+</body>
+</html>
